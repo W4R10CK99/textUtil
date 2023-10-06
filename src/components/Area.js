@@ -22,6 +22,12 @@ export default function Area(props) {
     const cleartext = () =>{
         setText("")
     }
+
+    const copytext=()=>{
+        var text = document.getElementById("myBox");
+        text.select();
+        navigator.clipboard.writeText(text.value);
+    }
     return (
         <>  
             <div className="container my-3">
@@ -33,7 +39,8 @@ export default function Area(props) {
             
             <button className="btn btn-primary mx-2" onClick={toUpCase}>Uppercase</button>
             <button className="btn btn-primary mx-2" onClick={toLowCase}>Lowercase</button>
-            <button className="btn btn-primary mx-2" onClick={cleartext}>Clear</button>
+            <button className="btn btn-primary mx-2" onClick={cleartext}>Clear Text</button>
+            <button className="btn btn-primary mx-2" onClick={copytext}>Copy Text</button>
             </div>
 
             <div className="container my-3">
