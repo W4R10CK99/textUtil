@@ -28,6 +28,13 @@ export default function Area(props) {
         text.select();
         navigator.clipboard.writeText(text.value);
     }
+    //used regex to split the words whenever a space is encountered
+    //newText will act as an array
+    //then stich those array elements and update text
+    const removeSpace = ()=>{
+        let newText = text.split(/[ ]+/)
+        setText(newText.join(" "))
+    }
     return (
         <>  
             <div className="container my-3">
@@ -36,11 +43,11 @@ export default function Area(props) {
                 <textarea className="form-control" id="myBox" value={text} onChange={change} rows="6"></textarea>
 
             </div>
-            
             <button className="btn btn-primary mx-2" onClick={toUpCase}>Uppercase</button>
             <button className="btn btn-primary mx-2" onClick={toLowCase}>Lowercase</button>
-            <button className="btn btn-primary mx-2" onClick={cleartext}>Clear Text</button>
+            <button className="btn btn-primary mx-2" onClick={removeSpace}>Remove Extra Spaces</button>
             <button className="btn btn-primary mx-2" onClick={copytext}>Copy Text</button>
+            <button className="btn btn-primary mx-2" onClick={cleartext}>Clear Text</button>
             </div>
 
             <div className="container my-3">
