@@ -11,12 +11,6 @@ export default function NavBar(props) {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/">{props.about}</a>
-              </li>
             </ul>
           </div>
           {/* here values have been changed to string literals and then ${} is used to use javascript code,

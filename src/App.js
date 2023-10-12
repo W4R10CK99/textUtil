@@ -44,7 +44,7 @@ function App() {
 
   return (
     <>
-    <NavBar title="TextUtil" about="About Us" mode = {mode} toggleMode={toggleMode} />
+    <NavBar title="Text Utility" about="About Us" mode = {mode} toggleMode={toggleMode} />
     <Alert alert = {alertmsg}/>
     <div className="container my-3">
     <Area title="Enter Your Text Here" mode={mode} alert={showAlert}/>
